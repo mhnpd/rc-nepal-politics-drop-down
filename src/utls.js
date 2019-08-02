@@ -30,7 +30,10 @@ export function rural(ruralMunicipalities, lang) {
 }
 
 export function mapProvinces(provinces, lang) {
-  return {}
+  if (lang === "en") {
+    return provinces.map(item => ({ value: item.Provinces, label: item.Provinces, meta: item }))
+  }
+  return provinces.map(item => ({ value: item.Nepali, label: item.Nepali, meta: item }))
 }
 
 /**
