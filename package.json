@@ -1,0 +1,41 @@
+{
+  "name": "rc-nepal-politics-drop-down",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhnpd/rc-nepal-politics-drop-down.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhnpd/rc-nepal-politics-drop-down.git"
+  },
+  "homepage": "https://mhnpd.github.io/react-loader-spinner/",
+  "scripts": {
+    "build": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "author": "Mohan Upadhyay",
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "react-select": "^3.0.4"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@storybook/addon-actions": "^5.1.10",
+    "@storybook/addon-links": "^5.1.10",
+    "@storybook/addons": "^5.1.10",
+    "@storybook/react": "^5.1.10",
+    "babel-loader": "^8.0.6"
+  }
+}
