@@ -1,8 +1,5 @@
 # React drop down component for Nepal's political distribution. 🇳🇵 
 
-<blockquote>
-This package is dependent on ``` react-select ``` as main dependency.
-</blockquote>
 
 
 ### Installation
@@ -50,6 +47,9 @@ There is a storybook for the all the component in this packages.
 | onMenuOpen |undefined |Function| Hook when drop down menu open. |
 | onMenuClose |undefined |Function| Hook whrn drop down menu close.|
 | placeholder |default field name|String| Placeholder for the fields |
+
+> This package is dependent on ``` react-select ``` as main dependency.
+
 
 ### Todo and remarks
 
