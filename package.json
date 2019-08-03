@@ -1,8 +1,8 @@
 {
   "name": "rc-nepal-politics-drop-down",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
   "repository": {
