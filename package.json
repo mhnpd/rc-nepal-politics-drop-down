@@ -1,11 +1,11 @@
 {
   "name": "rc-nepal-politics-drop-down",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.js",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
-  "url":"https://thecodersblog.com",
+  "url": "https://thecodersblog.com",
   "keywords": [
     "react-component",
     "nepal-politics-distribution",
