@@ -18,6 +18,14 @@ There is a storybook for the all the component in this packages.
   [Storybook Link]
 
 # List of component in this packages.
+| Component |  Detail |
+| ------ | ------ |
+|SelectDistrict| Dropdown for all Districts (जिल्ला) in nepal. |
+|SelectMetropolitan| Dropdown for all Metropolitan(महानगरपालिका) in nepal. |
+|SelectMunicipality| Dropdown for all Municipalities(नगरपालिका) in nepal. |
+|SelectProvinces| Dropdown for all Provinces (प्रदेश) in nepal. |
+|SelectRuralMetropolitan| Dropdown for all RuralMetropolitan (गाउँपालिका) in nepal. |
+|SelectSubMetropolitan| Dropdown for all Sub Metropolitan in nepal. |
 
 
 # Props and its default values.
