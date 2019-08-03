@@ -96,7 +96,6 @@
       meta: _propTypes2.default.any
     })),
     lang: _propTypes2.default.string,
-    searchable: _propTypes2.default.bool,
     "aria-label": _propTypes2.default.string,
     autoFocus: _propTypes2.default.bool,
     className: _propTypes2.default.string,
