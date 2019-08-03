@@ -1,3 +1,10 @@
+/**
+ * @author @mhnpd [Mohan Upadhyay]
+ * @email mhnpd@outlook.com
+ * @create date 2019-08-03 13:09:19
+ * @modify date 2019-08-03 13:09:19
+ * @desc [description]
+ */
 import { configure } from '@storybook/react';
 
 // automatically import all files ending in *.stories.js

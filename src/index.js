@@ -1,3 +1,10 @@
+/**
+ * @author @mhnpd [Mohan Upadhyay]
+ * @email mhnpd@outlook.com
+ * @create date 2019-08-03 13:08:43
+ * @modify date 2019-08-03 13:08:43
+ * @desc [description]
+ */
 import React from 'react'
 import PropTypes from 'prop-types';
 import Select from 'react-select';
