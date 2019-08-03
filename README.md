@@ -5,19 +5,19 @@ This package is dependent on ``` react-select ``` as main dependency.
 </blockquote>
 
 
-# Installation
+### Installation
 
-### Using NPM:
- ``` npm i rc-nepal-politics-drop-down ```
+##### Using NPM:
+ ```sh npm i rc-nepal-politics-drop-down ```
 
- ## Using yarn
-``` yarn add rc-nepal-politics-drop-down ```
+ #### Using yarn
+```sh  yarn add rc-nepal-politics-drop-down ```
 
-# Example and Demo
+### Example and Demo
 There is a storybook for the all the component in this packages.
   [Storybook Link]
 
-# List of component in this packages.
+### List of component in this packages.
 | Component |  Detail |
 | ------ | ------ |
 |SelectDistrict| Dropdown for all Districts (जिल्ला) in nepal. |
@@ -28,7 +28,7 @@ There is a storybook for the all the component in this packages.
 |SelectSubMetropolitan| Dropdown for all Sub Metropolitan in nepal. |
 
 
-# Props and its default values.
+### Props and its default values.
 
 | PropType | Default | Type | Detail |
 | ------ | --- | --- |------ |
@@ -51,10 +51,10 @@ There is a storybook for the all the component in this packages.
 | onMenuClose |undefined |Function| Hook whrn drop down menu close.|
 | placeholder |default field name|String| Placeholder for the fields |
 
-# Todo and remarks
+### Todo and remarks
 
 
-# Contribution Guide
+### Contribution Guide
 
 
 
