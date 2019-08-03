@@ -25,18 +25,18 @@ const DropDownSelect = ({ mapper, data, searchable, error, ...rest }) => {
 
 DropDownSelect.propTypes = {
   mapper: PropTypes.func.isRequired,
-  data: PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    meta: PropTypes.any.isRequired
-  }),
-  lang: PropTypes.oneOf["en", "npl"],
+  data: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string,
+    meta: PropTypes.any
+  })),
+  lang: PropTypes.string,
   searchable: PropTypes.bool,
   "aria-label": PropTypes.string,
   autoFocus: PropTypes.bool,
   className: PropTypes.string,
   hideSelectedOptions: PropTypes.bool,
-  id: PropTypes.id,
+  id: PropTypes.string,
   isMulti: PropTypes.bool,
   isSearchable: PropTypes.bool,
   minMenuHeight: PropTypes.number,
