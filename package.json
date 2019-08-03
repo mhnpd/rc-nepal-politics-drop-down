@@ -17,7 +17,7 @@
     "build": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook --output-dir ./docs"
   },
   "author": "Mohan Upadhyay",
   "license": "MIT",
