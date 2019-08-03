@@ -1,6 +1,8 @@
 # React drop down component for Nepal's political distribution. 🇳🇵 
 
-### Installation
+
+
+## Installation:
 
 ##### Using NPM:
  ```sh npm i rc-nepal-politics-drop-down ```

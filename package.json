@@ -5,14 +5,21 @@
   "main": "dist/index.js",
   "unpkg": "dist/index.js",
   "jsdelivr": "dist/index.js",
+  "url":"https://thecodersblog.com",
+  "keywords": [
+    "react-component",
+    "nepal-politics-distribution",
+    "nepal-politics",
+    "drop-down"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/mhnpd/rc-nepal-politics-drop-down.git"
   },
   "bugs": {
-    "url": "https://github.com/mhnpd/rc-nepal-politics-drop-down.git"
+    "url": "https://github.com/mhnpd/rc-nepal-politics-drop-down/issues"
   },
-  "homepage": "https://mhnpd.github.io/react-loader-spinner/",
+  "homepage": "https://mhnpd.github.io/rc-nepal-politics-drop-down/?path=/story/district--in-nepali",
   "scripts": {
     "build": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1",
