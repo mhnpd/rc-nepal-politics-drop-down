@@ -5,7 +5,7 @@
  * @modify date 2019-08-03 13:09:19
  * @desc [description]
  */
-import { configure } from '@storybook/react';
+import { configure, addParameters } from '@storybook/react';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../stories', true, /\.stories\.js$/);
