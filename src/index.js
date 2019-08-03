@@ -38,7 +38,6 @@ DropDownSelect.propTypes = {
     meta: PropTypes.any
   })),
   lang: PropTypes.string,
-  searchable: PropTypes.bool,
   "aria-label": PropTypes.string,
   autoFocus: PropTypes.bool,
   className: PropTypes.string,
