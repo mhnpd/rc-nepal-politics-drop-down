@@ -5,10 +5,10 @@
 ## Installation:
 
 ##### Using NPM:
- ```sh npm i rc-nepal-politics-drop-down ```
+ ``` npm i rc-nepal-politics-drop-down ```
 
  #### Using yarn
-```sh  yarn add rc-nepal-politics-drop-down ```
+```  yarn add rc-nepal-politics-drop-down ```
 
 ### Example and Demo
 There is a storybook for the all the component in this packages.
