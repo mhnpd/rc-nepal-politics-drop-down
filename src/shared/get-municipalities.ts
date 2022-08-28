@@ -1,6 +1,6 @@
 import { curry } from 'ramda'
 import municipalityRaw from '../data/municipalities.json'
-import { Language, ProvinceEnum } from '../types'
+import { Language, LimiterType, ProvinceEnum } from '../types'
 
 export interface IMunicipality {
   Name: string
@@ -17,11 +17,11 @@ export type MunicipalityOption = {
   meta: IMunicipality
 }
 
-const municipalities = (municipalityRaw as unknown) as IMunicipality[]
+export const municipalities = (municipalityRaw as unknown) as IMunicipality[]
 const getMunicipalityName = (mp: IMunicipality) => mp.Name
 const getMunicipalityNepali = (mp: IMunicipality) => mp.Nepali
 
-const getMunicipalityOption = (
+export const getMunicipalityOption = (
   municipality: IMunicipality,
   language: Language
 ): MunicipalityOption => ({
@@ -33,21 +33,32 @@ const getMunicipalityOption = (
       : getMunicipalityName(municipality)
 })
 
-const getMunicipalityInDistricts = (
+const isMunicipalityInDistrict = (
   districts: string[],
   municipality: MunicipalityOption
 ): boolean => {
   return districts.includes(municipality.meta.District)
 }
 
+const isMunicipalityInProvince = (
+  province: string[],
+  municipality: MunicipalityOption
+): boolean => {
+  return province.includes(municipality.meta.Province)
+}
+
 const getMetropolitanRaw = (
   municipalities: IMunicipality[],
-  districts: string[],
+  limiterType: LimiterType,
+  values: ProvinceEnum[] | string[],
   language: Language
 ): MunicipalityOption[] => {
+  const getter = limiterType === LimiterType.Province
+    ? isMunicipalityInProvince
+    : isMunicipalityInDistrict
   return municipalities
     .map(m => getMunicipalityOption(m, language))
-    .filter(metropolitan => getMunicipalityInDistricts(districts, metropolitan))
+    .filter(metropolitan => getter(values, metropolitan))
 }
 
 export const getMunicipalities = curry(getMetropolitanRaw)(municipalities)

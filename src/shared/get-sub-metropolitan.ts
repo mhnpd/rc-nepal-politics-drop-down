@@ -1,6 +1,6 @@
 import { curry } from 'ramda'
 import subMetroRaw from '../data/subMetropolitan.json'
-import { Language } from '../types'
+import { Language, LimiterType } from '../types'
 
 export interface ISubMetropolitan {
   Name: string
@@ -17,11 +17,11 @@ export type SubMetroOption = {
   meta: ISubMetropolitan
 }
 
-const subMetros = (subMetroRaw as unknown) as ISubMetropolitan[]
+export const subMetros = (subMetroRaw as unknown) as ISubMetropolitan[]
 const getSubMetroName = (sm: ISubMetropolitan) => sm.Name
 const getSubMetroNepali = (sm: ISubMetropolitan) => sm.Nepali
 
-const getSubMetroOption = (
+export const getSubMetroOption = (
   subMetro: ISubMetropolitan,
   language: Language
 ): SubMetroOption => ({
@@ -33,19 +33,23 @@ const getSubMetroOption = (
       : getSubMetroName(subMetro),
 })
 
-const isSubMetroInDistrict = (
-  subMetro: SubMetroOption,
-  districts: string[]
-) => districts.includes(subMetro.meta.District)
+const isSubMetroInDistrict = (subMetro: SubMetroOption, districts: string[]) =>
+  districts.includes(subMetro.meta.District)
+
+const isSubMetroInProvince = (subMetro: SubMetroOption, province: string[]) =>
+  province.includes(subMetro.meta.Province)
 
 const getSubMetroInDistrictsRaw = (
   subMetropolitan: ISubMetropolitan[],
-  districts: string[],
+  type: LimiterType,
+  values: string[],
   language: Language
 ) => {
+  const getter =
+    type === LimiterType.Province ? isSubMetroInProvince : isSubMetroInDistrict
   return subMetropolitan
     .map(sm => getSubMetroOption(sm, language))
-    .filter(sm => isSubMetroInDistrict(sm, districts))
+    .filter(sm => getter(sm, values))
 }
 
 export const getSubMetropolitan = curry(getSubMetroInDistrictsRaw)(subMetros)

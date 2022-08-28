@@ -1,6 +1,6 @@
 import { curry } from 'ramda'
 import ruralMunRaw from '../data/ruralMunicipalities.json'
-import { Language } from '../types'
+import { Language, LimiterType } from '../types'
 
 export interface IRuralMunicipality {
   Name: string
@@ -18,11 +18,11 @@ export type RuralMunicipalityOption = {
   meta: IRuralMunicipality
 }
 
-const rural = (ruralMunRaw as unknown) as IRuralMunicipality[]
+export const rural = (ruralMunRaw as unknown) as IRuralMunicipality[]
 const getMunicipalityName = (rm: IRuralMunicipality) => rm.Name
 const getMunicipalityNepali = (rm: IRuralMunicipality) => rm.Nepali
 
-const getRuralMunicipalityOption = (
+export const getRuralMunicipalityOption = (
   rm: IRuralMunicipality,
   language: Language
 ): RuralMunicipalityOption => ({
@@ -34,24 +34,38 @@ const getRuralMunicipalityOption = (
       : getMunicipalityName(rm),
 })
 
-const getRuralMunicipalityInDistricts = (
+const isRuralMunicipalityInDistrict = (
   r: RuralMunicipalityOption,
   districts: string[]
 ) => {
   return districts.includes(r.meta.District)
 }
 
-const getRuralMunicipalityInDistrictsRaw = (
-  ruralMunicipality: IRuralMunicipality[],
-  districts: string[],
-  language: Language
+const isRuralMunicipalityInProvince = (
+  r: RuralMunicipalityOption,
+  province: string[]
 ) => {
-  ruralMunicipality
-  .map(r=>getRuralMunicipalityOption(r, language))
-  .filter(r=>getRuralMunicipalityInDistricts(r, districts))
+  return province.includes(r.meta.Province)
 }
 
-export const getRuralMunicipalities = curry(getRuralMunicipalityInDistrictsRaw)(rural)
+const getRuralMunicipalityInDistrictsRaw = (
+  ruralMunicipality: IRuralMunicipality[],
+  type: LimiterType,
+  values: string[],
+  language: Language
+) => {
+  const getter =
+    type === LimiterType.Province
+      ? isRuralMunicipalityInProvince
+      : isRuralMunicipalityInDistrict
+  return ruralMunicipality
+    .map(r => getRuralMunicipalityOption(r, language))
+    .filter(r => getter(r, values))
+}
+
+export const getRuralMunicipalities = curry(getRuralMunicipalityInDistrictsRaw)(
+  rural
+)
 
 export const RuralMunicipalityListEnglish = rural.map(getMunicipalityName)
 export const RuralMunicipalityListNepali = rural.map(getMunicipalityNepali)

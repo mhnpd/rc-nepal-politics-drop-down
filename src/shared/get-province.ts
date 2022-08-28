@@ -1,5 +1,6 @@
+import { curry } from 'ramda'
 import provinceRaw from '../data/provinces.json'
-import { ProvinceEnum } from '../types'
+import { Language, ProvinceEnum } from '../types'
 
 export interface IProvince {
   Provinces: string
@@ -22,12 +23,24 @@ const getProvinceName = (province: IProvince): ProvinceEnum =>
 
 const getProvinceNepali = (province: IProvince) => province.Nepali
 
-const getProvinceOption = (province: IProvince): ProvinceOption => ({
+const getProvinceOption = (
+  province: IProvince,
+  language: Language
+): ProvinceOption => ({
   meta: province,
   value: province.Provinces,
-  label: province.Nepali,
+  label:
+    language === Language.Nepali
+      ? getProvinceNepali(province)
+      : getProvinceName(province),
 })
+
+const getProvinceRaw = (
+  province:IProvince[], 
+  language: Language) => {
+  return province.map(province => getProvinceOption(province, language))
+}
 
 export const provinceListEnglish = Province.map(getProvinceName)
 export const provinceListNepali = Province.map(getProvinceNepali)
-export const provinceOptions = Province.map(getProvinceOption)
+export const getProvince = curry(getProvinceRaw)(Province)

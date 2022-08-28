@@ -1,5 +1,9 @@
 export enum TestIds {
-  DistrictSelection = 'districtSelection',
-  MetropolitanSelection = 'metropolitanSelection',
-  SelectRuralMunicipalities = 'selectRuralMunicipalities',
+  SelectDistrict = 'select-district',
+  SelectMetropolitan = 'select-metropolitan',
+  SelectMunicipality = 'select-municipality',
+  SelectRuralMunicipalities = 'select-rural-municipalities',
+  SelectSubMetropolitan = 'select-sub-metropolitan',
+  SelectProvince = 'select-province',
+  SelectLocalBodies = 'select-local-bodies',
 }

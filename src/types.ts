@@ -27,5 +27,15 @@ export type LocalBodies = Pick<
   'Metropolitan' | 'RuralMunicipalities' | 'SubMetropolitan'
 >
 
+export enum LimiterType {
+  'Province' = 'Province',
+  'District' = 'District',
+}
+
+export type Limiter = {
+  type: LimiterType,
+  values: string[] | ProvinceEnum[],
+}
+
 
 
