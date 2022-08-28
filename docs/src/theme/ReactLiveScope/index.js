@@ -1,5 +1,5 @@
 import React from 'react'
-import {SelectDistrict} from '../../components/lib'
+import {SelectDistrict} from 'rc-nepal-politics-drop-down'
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,

@@ -1,6 +1,6 @@
 export enum Politics {
   District = 'District',
-  Metropolitan = 'Metropolitan',
+  Metropolitan = 'metropolitan',
   Municipalities = 'Municipalities',
   Province = 'Province',
   RuralMunicipalities = 'RuralMunicipalities',
@@ -8,11 +8,11 @@ export enum Politics {
 }
 
 export enum Language {
-  en = 'EN',
-  np = 'NP',
+  English = 'en',
+  Nepali = 'np',
 }
 
-export enum Province {
+export enum ProvinceEnum {
   'ProvinceNo1' = 'Province No. 1',
   'MadheshProvince' = 'Madhesh',
   'BagmatiProvince' = 'Bagmati',
@@ -27,12 +27,5 @@ export type LocalBodies = Pick<
   'Metropolitan' | 'RuralMunicipalities' | 'SubMetropolitan'
 >
 
-export interface IDistrict {
-  Name: string
-  Nepali: string
-  Headquarters: string
-  'Population (2011)': string
-  'Area(km2)': string
-  Province: Province
-  LocalBodiesType: LocalBodies[]
-}
+
+
