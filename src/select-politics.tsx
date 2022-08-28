@@ -12,7 +12,7 @@ import { Language, Limiter, LimiterType, ProvinceEnum } from "./types"
 
 export interface SelectPoliticsProps {
   language: Language,
-  limiter: Limiter
+  limiter?: Limiter
 }
 
 export const SelectDistrict = (props:SelectPoliticsProps) => (
@@ -20,7 +20,7 @@ export const SelectDistrict = (props:SelectPoliticsProps) => (
     {...props}
     testId={TestIds.SelectDistrict}
     options = {getDistrictOptions(
-      props.limiter.values as ProvinceEnum[] || [...Object.values(ProvinceEnum)],
+      props.limiter?.values as ProvinceEnum[] || [...Object.values(ProvinceEnum)],
       props.language || Language.English
       )}
   />
@@ -31,8 +31,8 @@ export  const SelectMunicipality = (props:SelectPoliticsProps) => (
     {...props}
     testId={TestIds.SelectMunicipality}
     options = {getMunicipalities(
-      props.limiter.type || LimiterType.District,
-      props.limiter.values || districtListEnglish,
+      props.limiter?.type || LimiterType.District,
+      props.limiter?.values || districtListEnglish,
       props.language || Language.English
       )}
   />
@@ -43,8 +43,8 @@ export const SelectRuralMunicipalities = (props:SelectPoliticsProps) => (
     {...props}
     testId={TestIds.SelectRuralMunicipalities}
     options = {getRuralMunicipalities(
-      props.limiter.type || LimiterType.District,
-      props.limiter.values || districtListEnglish,
+      props.limiter?.type || LimiterType.District,
+      props.limiter?.values || districtListEnglish,
       props.language || Language.English
       )}
   />
@@ -55,8 +55,8 @@ export const SelectMetropolitan = (props:SelectPoliticsProps) => (
     {...props}
     testId={TestIds.SelectMetropolitan}
     options = {getMetropolitan(
-      props.limiter.type || LimiterType.District,
-      props.limiter.values || districtListEnglish,
+      props.limiter?.type || LimiterType.District,
+      props.limiter?.values || districtListEnglish,
       props.language || Language.English
       )}
   />
@@ -67,8 +67,8 @@ export const SelectSubMetropolitan = (props:SelectPoliticsProps) => (
     {...props}
     testId={TestIds.SelectSubMetropolitan}
     options = {getSubMetropolitan(
-      props.limiter.type || LimiterType.District,
-      props.limiter.values || districtListEnglish,
+      props.limiter?.type || LimiterType.District,
+      props.limiter?.values || districtListEnglish,
       props.language || Language.English
       )}
   />
@@ -79,8 +79,8 @@ export const SelectLocalBodies = (props:SelectPoliticsProps) => (
     {...props}
     testId={TestIds.SelectLocalBodies}
     options = {getLocalBodies(
-      props.limiter.type || LimiterType.District,
-      props.limiter.values || districtListEnglish,
+      props.limiter?.type || LimiterType.District,
+      props.limiter?.values || districtListEnglish,
       props.language || Language.English
     )}
   />
