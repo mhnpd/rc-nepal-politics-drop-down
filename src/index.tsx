@@ -1,1 +1,1 @@
-export * from './select-district'
+export {SelectDistrict} from './select-district'

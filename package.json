@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.6",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -7,9 +7,25 @@
     "dist",
     "src"
   ],
+  "keywords": [
+    "react-component",
+    "nepal-politics-distribution",
+    "nepal-politics",
+    "drop-down"
+  ],
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhnpd/rc-nepal-politics-drop-down.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhnpd/rc-nepal-politics-drop-down/issues"
+  },
+  "homepage": "https://mhnpd.github.io/rc-nepal-politics-drop-down/",
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -19,9 +35,6 @@
     "size": "size-limit",
     "analyze": "size-limit --why",
     "start:doc": "npm run start --prefix ./docs"
-  },
-  "peerDependencies": {
-    "react": ">=16"
   },
   "husky": {
     "hooks": {
@@ -35,7 +48,7 @@
     "trailingComma": "es5"
   },
   "name": "rc-nepal-politics-drop-down",
-  "author": "Mohan",
+  "author": "Mohan Upadhyay",
   "module": "dist/rc-nepal-politics-drop-down.esm.js",
   "size-limit": [
     {
@@ -56,9 +69,9 @@
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
     "husky": "^8.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-is": "^18.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-is": "^17.0.2",
     "size-limit": "^8.0.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
@@ -66,5 +79,9 @@
   },
   "dependencies": {
     "react-select": "^5.4.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   }
 }

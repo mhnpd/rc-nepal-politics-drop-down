@@ -2,5 +2,8 @@
 .DS_Store
 node_modules
 docs/node_modules
+# Generated files
+docs/.docusaurus
+docs/.cache-loader
 .cache
 dist
