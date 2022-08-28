@@ -1,0 +1,11 @@
+---
+sidebar_position: 2
+---
+
+# District Selection
+
+This component allows the user to select a district. `SelectDistrict` component
+internally uses `react-select` component to display the list of districts. Refer
+`react-select` documentation for more details on the props.
+
+### Normal District Selection
