@@ -1,0 +1,50 @@
+[
+  {
+    "Name": "Kathmandu",
+    "Nepali": "काठमाण्डौ",
+    "District": "Kathmandu",
+    "Province": "Province No. 3",
+    "Population (2011)": "975,453",
+    "Area (km)": "49.45"
+  },
+  {
+    "Name": "Pokhara",
+    "Nepali": "पोखरा",
+    "District": "Kaski",
+    "Province": "Gandaki",
+    "Population (2011)": "426,759",
+    "Area (km)": "464.28"
+  },
+  {
+    "Name": "Lalitpur",
+    "Nepali": "ललितपुर",
+    "District": "Lalitpur",
+    "Province": "Province No. 3",
+    "Population (2011)": "284,922",
+    "Area (km)": "36.12"
+  },
+  {
+    "Name": "Bharatpur",
+    "Nepali": "भरतपुर",
+    "District": "Chitwan",
+    "Province": "Province No. 3",
+    "Population (2011)": "280,502",
+    "Area (km)": "432.95"
+  },
+  {
+    "Name": "Birgunj",
+    "Nepali": "बिरगंज",
+    "District": "Parsa",
+    "Province": "Province No. 2",
+    "Population (2011)": "240,922",
+    "Area (km)": "132.07"
+  },
+  {
+    "Name": "Biratnagar",
+    "Nepali": "विराटनगर",
+    "District": "Morang",
+    "Province": "Province No. 1",
+    "Population (2011)": "214,663",
+    "Area (km)": "77.00"
+  }
+]
