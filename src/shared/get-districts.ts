@@ -1,7 +1,6 @@
 import { curry } from 'ramda'
 import districtRaw from '../data/districts.json'
 import { ProvinceEnum, LocalBodies, Language } from '../types'
-import { provinceListEnglish } from './get-province'
 
 export interface DistrictOption {
   value: string
